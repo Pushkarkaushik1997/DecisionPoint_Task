@@ -1,0 +1,33 @@
+h2{
+    text-align: center;
+}
+.table-hover tbody tr:hover>td {
+    background-color: rgb(183, 194, 183);
+  }
+  
+  .table-hover tbody tr:hover>th {
+    background-color: rgb(183, 194, 183);
+  }
+  .btn{
+      margin: 2px;
+      border: 1px solid white;
+  }
+  .form-actions {
+    margin: 0;
+    text-align: center;
+  }
+  .update{
+    margin-bottom: 3%;
+
+  }
+  .margin{
+    margin-bottom: 1%;
+  }
+  .input{
+    margin-bottom: 2%;
+    margin-top: 2%;
+    
+  }
+  /* .visible{
+    display: none;
+  } */

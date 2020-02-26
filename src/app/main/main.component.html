@@ -1,0 +1,55 @@
+<div class="container-fluid" style="margin-top: 2%;">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <h2 style="text-align: center;">Task</h2>
+
+      <form>
+        <div class="row input">
+          <div class="col-sm-2 col-form-label">
+            <label
+              ><b>
+                <h5>Search By Shop</h5>
+              </b></label
+            >
+          </div>
+          <div class="col-sm-8">
+            <input
+            type="text"
+            class="form-control"
+            name="searchString"
+            placeholder="Type to search"
+            [(ngModel)]="searchString"
+          />
+          </div>
+        </div>
+      </form>
+
+      <table class="table table-hover table-bordered ">
+        <thead style="text-align: center;">
+          <tr>
+            <th scope="col">User Id</th>
+           
+            <th scope="col">Name</th>
+            <th scope="col">Username</th>
+            
+          </tr>
+        </thead>
+        <tbody *ngIf="data">
+          <p *ngIf="data.length == 0">
+            <b>No Values</b>
+          </p>
+          <tr *ngFor="let obj1 of data | filter: searchString; index as i">
+
+            <td>{{ obj1.id }}</td>
+            <td  routerLink="/userdetail/{{obj1.id}}">
+              {{ obj1.name }}
+            </td>
+            <td  routerLink="/userdetail/{{obj1.id}}">
+              {{ obj1.username }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
