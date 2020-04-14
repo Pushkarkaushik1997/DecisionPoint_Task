@@ -1,6 +1,22 @@
-.head{
-    display: inline;
+.head {
+  display: inline;
 }
-.head2{
-    font-size: 20px; margin-left: 2%; 
+.head2 {
+  font-size: 20px;
+  margin-left: 2%;
+}
+
+.table-striped > tbody > tr:nth-child(2n + 1) > td,
+.table-striped > tbody > tr:nth-child(2n + 1) > th {
+  background-color: rgb(162, 235, 179);
+}
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+  background-color: rgb(145, 194, 226);
+}
+.table{
+    border: 1px black solid!important;
+}
+.table th{
+    transition-delay: 200s;
 }

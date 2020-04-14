@@ -20,4 +20,14 @@ export class ConnectService {
     }
     return this.http.get(`https://jsonplaceholder.typicode.com/posts?userId=${id}`);
     }
+
+    update(id,body){
+      let obj2={
+        id:id,body
+      }
+      this.http.post('https://jsonplaceholder.typicode.com/posts?userId=${id}',obj2).subscribe(res=>{
+        console.log(res)
+      })
+    }
+    
 }
